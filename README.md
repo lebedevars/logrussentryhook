@@ -3,7 +3,7 @@
 Example usage:
 
 ```go
-hook := huilogger.New("dsn", "environment")
+hook := lhs.New("dsn", "environment")
 hook.SetLevels([]logrus.Level{logrus.WarnLevel, logrus.ErrorLevel}) // Error, Fatal, Panic by default
 
 err := hook.Init()
