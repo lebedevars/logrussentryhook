@@ -1,4 +1,4 @@
-module logrussentryhook
+module github.com/lebedevars/logrussentryhook
 
 go 1.13
 
