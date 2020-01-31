@@ -1,4 +1,4 @@
-module lsh
+module logrussentryhook
 
 go 1.13
 
