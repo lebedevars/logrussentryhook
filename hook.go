@@ -73,7 +73,7 @@ func (hook *SentryHook) Fire(entry *logrus.Entry) error {
 func New(dsn, environment string, ignoredModules ...string) *SentryHook {
 	// игнорю сам себя и логрус
 	ignoredModules = append(ignoredModules, reflect.TypeOf(SentryHook{}).PkgPath(), "github.com/sirupsen/logrus")
-	return &SentryHook{IgnoredModules: ignoredModules}
+	return &SentryHook{IgnoredModules: ignoredModules, dsn:dsn, environment:environment}
 }
 
 func (hook *SentryHook) SetLevels(newLevels []logrus.Level) {
